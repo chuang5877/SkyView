@@ -19,4 +19,16 @@ public class SkyView {
             }
         }
     }
+    public double getAverage(int startRow, int endRow,int startCol,int endCol){
+        double sum=0;
+        int x=0,y=0;
+        for(int n=startCol;n<endCol;n++){
+            for (int i=startRow;i<endRow;i++){
+                sum+=view[i][n];
+                y++;
+            }
+            x++;
+        }
+        return sum/(x*y);
+    }
 }
